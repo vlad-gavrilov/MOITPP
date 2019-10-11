@@ -1,0 +1,153 @@
+unit Unit1;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+
+type
+
+  { TForm1 }
+
+  TForm1 = class(TForm)
+    Button1: TButton;
+    ComboBox1: TComboBox;
+    ComboBox2: TComboBox;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
+    procedure ComboBox2Change(Sender: TObject);
+  private
+
+  public
+
+  end;
+
+const
+  d2r = 64.3;
+  d2e = 0.9;
+  d2p = 0.8;
+  r2e = 0.014;
+  r2p = 0.012;
+  e2p = 0.89;
+
+var
+  Form1: TForm1;
+  amount: integer;
+  rate, result: real;
+  s, currency1, currency2: string;
+
+implementation
+
+{$R *.lfm}
+
+{ TForm1 }
+
+function getExchangeRate() : real;
+begin
+  case currency1 of
+   'Доллары' :
+     case currency2 of
+      'Рубли' : getExchangeRate:=d2r;
+      'Евро' : getExchangeRate:=d2e;
+      'Фунты' : getExchangeRate:=d2p;
+      else getExchangeRate:=1;
+     end;
+   'Рубли' :
+     case currency2 of
+      'Доллары' : getExchangeRate:=1/d2r;
+      'Евро' : getExchangeRate:=r2e;
+      'Фунты' : getExchangeRate:=r2p;
+      else getExchangeRate:=1;
+     end;
+   'Евро' :
+     case currency2 of
+      'Доллары' : getExchangeRate:=1/d2e;
+      'Фунты' : getExchangeRate:=e2p;
+      'Рубли' : getExchangeRate:=1/r2e;
+      else getExchangeRate:=1;
+     end;
+   'Фунты' :
+     case currency2 of
+      'Доллары' : getExchangeRate:=1/d2p;
+      'Евро' : getExchangeRate:=1/e2p;
+      'Рубли' : getExchangeRate:=1/r2p;
+      else getExchangeRate:=1;
+     end;
+   else getExchangeRate:=1;
+  end;
+end;
+
+function getCurrencySign(name: string) : string;
+begin
+  case name of
+   'Доллары' : getCurrencySign:='$';
+   'Рубли' : getCurrencySign:='₽';
+   'Евро' : getCurrencySign:='€';
+   'Фунты' : getCurrencySign:='£';
+   else getCurrencySign:='?';
+  end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  currency1:=ComboBox1.Items.Strings[ComboBox1.ItemIndex];
+  currency2:=ComboBox2.Items.Strings[ComboBox2.ItemIndex];
+  s:= '';
+  try
+     amount:=strToInt(Edit1.Text);
+  except
+     on EConvertError do
+     begin
+       s:= s + 'Исходная валюта должна быть целочисленным значением!';
+     end;
+  end;
+  try
+     rate:=strToFloat(Edit2.Text);
+  except
+     on EConvertError do
+     begin
+       if (s <> '') then
+          s:= s + #13#10;
+       s:= s + 'Курс должен быть вещественным числом!';
+     end;
+  end;
+  Application.Title:='Результат';
+  if (s = '') then
+    begin
+      result:=amount * rate;
+      s:=floatToStr(result);
+      s:=intToStr(amount) + getCurrencySign(currency1) + ' = ' + s + getCurrencySign(currency2);
+      ShowMessage(s);
+    end
+  else
+    begin
+      ShowMessage(s);
+    end;
+end;
+
+procedure TForm1.ComboBox1Change(Sender: TObject);
+begin
+  currency1:=ComboBox1.Items.Strings[ComboBox1.ItemIndex];
+  currency2:=ComboBox2.Items.Strings[ComboBox2.ItemIndex];
+  rate:=getExchangeRate();
+  Edit2.Text:=floatToStr(rate);
+end;
+
+procedure TForm1.ComboBox2Change(Sender: TObject);
+begin
+  currency1:=ComboBox1.Items.Strings[ComboBox1.ItemIndex];
+  currency2:=ComboBox2.Items.Strings[ComboBox2.ItemIndex];
+  rate:=getExchangeRate();
+  Edit2.Text:=floatToStr(rate);
+end;
+
+end.
+

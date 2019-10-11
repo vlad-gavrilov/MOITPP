@@ -1,0 +1,104 @@
+object Form1: TForm1
+  Left = 458
+  Height = 217
+  Top = 441
+  Width = 390
+  BorderStyle = bsSingle
+  Caption = 'Конвертер валют'
+  ClientHeight = 217
+  ClientWidth = 390
+  LCLVersion = '1.8.2.0'
+  object ComboBox1: TComboBox
+    Left = 224
+    Height = 27
+    Top = 16
+    Width = 148
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Доллары'
+      'Рубли'
+      'Евро'
+      'Фунты'
+    )
+    OnChange = ComboBox1Change
+    Style = csDropDownList
+    TabOrder = 0
+    Text = 'Доллары'
+  end
+  object Label1: TLabel
+    Left = 88
+    Height = 17
+    Top = 16
+    Width = 128
+    Caption = 'Исходная валюта:'
+    ParentColor = False
+  end
+  object ComboBox2: TComboBox
+    Left = 224
+    Height = 27
+    Top = 56
+    Width = 148
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Доллары'
+      'Рубли'
+      'Евро'
+      'Фунты'
+    )
+    OnChange = ComboBox2Change
+    Style = csDropDownList
+    TabOrder = 1
+    Text = 'Доллары'
+  end
+  object Label2: TLabel
+    Left = 38
+    Height = 17
+    Top = 56
+    Width = 178
+    Caption = 'Результирующая валюта:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 96
+    Height = 17
+    Top = 96
+    Width = 120
+    Caption = 'Исходная сумма:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 224
+    Height = 27
+    Top = 96
+    Width = 148
+    TabOrder = 2
+    Text = '20'
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 17
+    Top = 160
+    Width = 35
+    Caption = 'Курс:'
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 64
+    Height = 27
+    Top = 160
+    Width = 152
+    TabOrder = 3
+    Text = '1'
+  end
+  object Button1: TButton
+    Left = 224
+    Height = 27
+    Top = 160
+    Width = 148
+    Caption = 'Перевод'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+end

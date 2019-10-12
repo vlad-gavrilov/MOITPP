@@ -1,0 +1,211 @@
+object Form1: TForm1
+  Left = 417
+  Height = 516
+  Top = 264
+  Width = 772
+  Caption = 'Form1'
+  ClientHeight = 516
+  ClientWidth = 772
+  LCLVersion = '1.8.2.0'
+  object BitBtn1: TBitBtn
+    Left = 22
+    Height = 30
+    Top = 14
+    Width = 75
+    Caption = 'BitBtn1'
+    TabOrder = 0
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 46
+    Height = 22
+    Top = 69
+    Width = 23
+  end
+  object StaticText1: TStaticText
+    Left = 37
+    Height = 17
+    Top = 122
+    Width = 65
+    Caption = 'StaticText1'
+    TabOrder = 1
+  end
+  object Image1: TImage
+    Left = 37
+    Height = 90
+    Top = 162
+    Width = 90
+  end
+  object Shape1: TShape
+    Left = 39
+    Height = 65
+    Top = 274
+    Width = 65
+  end
+  object Bevel1: TBevel
+    Left = 54
+    Height = 50
+    Top = 386
+    Width = 50
+  end
+  object PaintBox1: TPaintBox
+    Left = 146
+    Height = 105
+    Top = 36
+    Width = 105
+  end
+  object Notebook1: TNotebook
+    Left = 197
+    Height = 50
+    Top = 200
+    Width = 75
+    TabOrder = 2
+  end
+  object Notebook2: TNotebook
+    Left = 183
+    Height = 50
+    Top = 324
+    Width = 75
+    TabOrder = 3
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 312
+    Height = 34
+    Top = 44
+    Width = 80
+    EditLabel.AnchorSideLeft.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Control = LabeledEdit1
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = LabeledEdit1
+    EditLabel.Left = 312
+    EditLabel.Height = 17
+    EditLabel.Top = 24
+    EditLabel.Width = 80
+    EditLabel.Caption = 'LabeledEdit1'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+    Text = 'LabeledEdit1'
+  end
+  object Splitter1: TSplitter
+    Left = 0
+    Height = 516
+    Top = 0
+    Width = 5
+  end
+  object ControlBar1: TControlBar
+    Left = 380
+    Height = 50
+    Top = 301
+    Width = 100
+    TabOrder = 6
+  end
+  object FlowPanel1: TFlowPanel
+    Left = 390
+    Height = 50
+    Top = 412
+    Width = 170
+    Caption = 'FlowPanel1'
+    ControlList = <>
+    FlowLayout = tlTop
+    FlowStyle = fsLeftRightTopBottom
+    TabOrder = 7
+  end
+  object MaskEdit1: TMaskEdit
+    Left = 520
+    Height = 34
+    Top = 17
+    Width = 80
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 8
+    Text = 'MaskEdit1'
+    SpaceChar = '_'
+  end
+  object CheckListBox1: TCheckListBox
+    Left = 529
+    Height = 80
+    Top = 125
+    Width = 100
+    ItemHeight = 0
+    TabOrder = 9
+    TopIndex = -1
+  end
+  object ScrollBox1: TScrollBox
+    Left = 559
+    Height = 150
+    Top = 276
+    Width = 150
+    HorzScrollBar.Page = 1
+    VertScrollBar.Page = 1
+    TabOrder = 10
+  end
+  object DrawGrid1: TDrawGrid
+    Left = 685
+    Height = 100
+    Top = 126
+    Width = 200
+    ExtendedSelect = False
+    TabOrder = 11
+  end
+  object ColorBox1: TColorBox
+    Left = 712
+    Height = 33
+    Top = 17
+    Width = 100
+    ItemHeight = 0
+    TabOrder = 12
+  end
+  object ValueListEditor1: TValueListEditor
+    Left = 176
+    Height = 100
+    Top = 400
+    Width = 200
+    FixedCols = 0
+    RowCount = 2
+    TabOrder = 13
+    ColWidths = (
+      64
+      134
+    )
+  end
+  object ColorListBox1: TColorListBox
+    Left = 272
+    Height = 80
+    Top = 216
+    Width = 100
+    ItemHeight = 0
+    TabOrder = 14
+  end
+  object PairSplitter1: TPairSplitter
+    Left = 444
+    Height = 90
+    Top = 58
+    Width = 90
+    Position = 45
+    object PairSplitterSide1: TPairSplitterSide
+      Cursor = crArrow
+      Left = 0
+      Height = 90
+      Top = 0
+      Width = 45
+    end
+    object PairSplitterSide2: TPairSplitterSide
+      Cursor = crArrow
+      Left = 50
+      Height = 90
+      Top = 0
+      Width = 40
+    end
+  end
+  object TrayIcon1: TTrayIcon
+    left = 378
+    top = 138
+  end
+  object TrayIcon2: TTrayIcon
+    left = 408
+    top = 216
+  end
+  object ApplicationProperties1: TApplicationProperties
+    left = 636
+    top = 59
+  end
+end

@@ -69,18 +69,23 @@ var
 
     while not EOF(Marks) do
     begin
-      repeat
-        readln(Marks, strCurrentLine);
-        Inc(lineNumber);
-      until (strCurrentLine <> ',') or EOF(Marks);
-      positionOfSeparator := pos(',', strCurrentline);
+      readln(Marks, strCurrentLine);
+      Inc(lineNumber);
+      positionOfSeparator := pos(',', strCurrentLine);
+
+      //Пропускаем пустые строки и строки, содержащие только запятую
+      if (strCurrentLine = '') or (strCurrentLine = ',') then
+      begin
+        continue;
+      end;
 
       //Если неправильный формат данных
       if (positionOfSeparator <> 2) and (strCurrentLine <> ',') then
       begin
         errorId := 3;
         printError;
-        exit;
+        //exit;
+        continue;
       end;
 
       charCurrentGender := leftstr(strCurrentLine, 1)[1];
@@ -90,11 +95,11 @@ var
       begin
         errorId := 4;
         printError;
-        exit;
+        //exit;
+        continue;
       end;
 
       strCurrentScore := rightstr(strCurrentLine, length(strCurrentLine) - 2);
-      //Последние символы в строке
       val(strCurrentScore, intCurrentScore, ErrorCode);
 
       //Если нельзя привести последние символы к числовому виду
@@ -102,7 +107,8 @@ var
       begin
         errorId := 5;
         printError;
-        exit;
+        //exit;
+        continue;
       end;
 
       //Если число баллов вне диапазона от 0 до 100
@@ -110,7 +116,8 @@ var
       begin
         errorId := 6;
         printError;
-        exit;
+        //exit;
+        continue;
       end;
 
       if charCurrentGender = 'M' then
@@ -131,7 +138,7 @@ var
 
     if intMales = 0 then
     begin
-      writeln('No males');
+      //writeln('No males');
       strMalePassRate := 'NoMales';
     end
     else
@@ -143,7 +150,7 @@ var
 
     if intFemales = 0 then
     begin
-      writeln('No females');
+      //writeln('No females');
       strFemalePassRate := 'NoFemales';
     end
     else

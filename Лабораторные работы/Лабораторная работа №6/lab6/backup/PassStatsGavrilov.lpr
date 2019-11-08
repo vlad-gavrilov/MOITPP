@@ -1,7 +1,7 @@
 program PassStatsBasic;
 
   {$APPTYPE CONSOLE}
-  {$DEFINE DEBUG}
+  {.$DEFINE DEBUG}
 //Reads scores for males and females from a csv file
 //and outputs pass rate for each.
 uses

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="TestStatsGavrilov.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="97"/>
+        <CursorPos X="5" Y="132"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="testcases1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestCases1"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="67"/>
+        <CursorPos X="5" Y="102"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="stats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Stats"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="137"/>
+        <CursorPos X="34" Y="159"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="3" HistoryIndex="2">
+      <Position1>
+        <Filename Value="TestStatsGavrilov.lpr"/>
+        <Caret Line="2" Column="22"/>
+      </Position1>
+      <Position2>
+        <Filename Value="testcases1.pas"/>
+        <Caret Line="15" Column="27"/>
+      </Position2>
+      <Position3>
+        <Filename Value="stats.pas"/>
+        <Caret Line="16" Column="44"/>
+      </Position3>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

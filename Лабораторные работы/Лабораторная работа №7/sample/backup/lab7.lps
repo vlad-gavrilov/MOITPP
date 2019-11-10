@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="4">
+      <Unit0>
+        <Filename Value="lab7.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PassStats2"/>
+        <CursorPos X="5" Y="132"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="stats.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Stats"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="20" Y="27"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="testcases1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestCases1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="16"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="teststats2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TestStats2"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="10" Y="102"/>
+        <UsageCount Value="20"/>
+      </Unit3>
+    </Units>
+    <JumpHistory Count="4" HistoryIndex="3">
+      <Position1>
+        <Filename Value="stats.pas"/>
+        <Caret Line="165" Column="5"/>
+      </Position1>
+      <Position2>
+        <Filename Value="lab7.lpr"/>
+        <Caret Line="8" Column="5"/>
+      </Position2>
+      <Position3>
+        <Filename Value="lab7.lpr"/>
+        <Caret Line="6" Column="38"/>
+      </Position3>
+      <Position4>
+        <Filename Value="lab7.lpr"/>
+        <Caret Line="7" Column="25"/>
+      </Position4>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

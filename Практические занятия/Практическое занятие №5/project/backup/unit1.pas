@@ -58,15 +58,20 @@ begin
   if (side1 = 0) or (side2 = 0) or (side3 = 0) then
     answer := 'Длина не может быть равна 0'
   else
-  if (side1 * side2 * side3 > 0) then
+  if (side1 > 0) and (side2 > 0) and (side3 > 0) then
   begin
-    if (side1 = side2) and (side2 = side3) then
-      answer := 'Равносторонний'
+    if (side1 > side2 + side3) or (side2 > side1 + side3) or (side3 > side1 + side3) then
+       answer := 'Такого треугольника не существует'
     else
-    if (side1 = side2) or (side2 = side3) or (side1 = side3) then
-      answer := 'Равнобедренный'
-    else
-      answer := 'Неравносторонний';
+    begin
+      if (side1 = side2) and (side2 = side3) then
+        answer := 'Равносторонний'
+      else
+      if (side1 = side2) or (side2 = side3) or (side1 = side3) then
+        answer := 'Равнобедренный'
+      else
+        answer := 'Неравносторонний';
+    end;
   end
   else
     answer := 'Длина не может быть отрицательной';

@@ -1,0 +1,197 @@
+object fMain: TfMain
+  Left = 283
+  Height = 500
+  Top = 113
+  Width = 750
+  Caption = 'БлокнотШифровальщик'
+  ClientHeight = 480
+  ClientWidth = 750
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.6.4.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 480
+    Top = 0
+    Width = 750
+    Align = alClient
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnChange = Memo1Change
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 0
+  end
+  object OD: TOpenDialog
+    DefaultExt = '.txt'
+    Filter = 'Текстовые файлы|.txt|Все файлы|.'
+    left = 62
+    top = 50
+  end
+  object SD: TSaveDialog
+    Filter = 'Текстовые файлы|.txt|Все файлы|.'
+    left = 120
+    top = 80
+  end
+  object FD: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 176
+    top = 107
+  end
+  object CD: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 243
+    top = 146
+  end
+  object MainMenu1: TMainMenu
+    left = 320
+    top = 64
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object FileMenu: TMenuItem
+        Caption = 'Файл'
+      end
+      object FileCreate: TMenuItem
+        Caption = 'Создать'
+        ShortCut = 16462
+        OnClick = FileCreateClick
+      end
+      object FileOpen: TMenuItem
+        Caption = 'Открыть'
+        ShortCut = 16463
+        OnClick = FileOpenClick
+      end
+      object FileSave: TMenuItem
+        Caption = 'Сохранить'
+        ShortCut = 16467
+        OnClick = FileSaveClick
+      end
+      object FileSaveAs: TMenuItem
+        Caption = 'Сохранить как…'
+        OnClick = FileSaveAsClick
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object FileExit: TMenuItem
+        Caption = 'Выход'
+        OnClick = FileExitClick
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Правка'
+      OnClick = MenuItem3Click
+      object EditMenu: TMenuItem
+        Caption = 'Правка'
+      end
+      object EditCancel: TMenuItem
+        Caption = 'Отменить'
+        ShortCut = 16474
+        OnClick = EditCancelClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
+        ShortCut = 16472
+      end
+      object EditCut: TMenuItem
+        Caption = 'Вырезать'
+        ShortCut = 16472
+        OnClick = EditCutClick
+      end
+      object EditCopy: TMenuItem
+        Caption = 'Копировать'
+        ShortCut = 16451
+        OnClick = EditCopyClick
+      end
+      object EditPaste: TMenuItem
+        Caption = 'Вставить'
+        ShortCut = 16470
+        OnClick = EditPasteClick
+      end
+      object EditDelete: TMenuItem
+        Caption = 'Удалить'
+        OnClick = EditDeleteClick
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object EditSelectAll: TMenuItem
+        Caption = 'Выделить всё'
+        ShortCut = 16449
+      end
+    end
+    object MenuItem22: TMenuItem
+      Caption = 'Формат'
+      object FormatMenu: TMenuItem
+        Caption = 'Формат'
+      end
+      object FormatFont: TMenuItem
+        Caption = 'Шрифт'
+        OnClick = FormatFontClick
+      end
+      object FormatColor: TMenuItem
+        Caption = 'Цвет'
+        OnClick = FormatColorClick
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object FormatWordWrap: TMenuItem
+        Caption = 'Перенос по словам'
+        Checked = True
+        OnClick = FormatWordWrapClick
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Кодирование'
+      OnClick = MenuItem4Click
+      object CoderMenu: TMenuItem
+        Caption = 'Кодирование'
+        OnClick = CoderMenuClick
+      end
+      object CoderCode: TMenuItem
+        Caption = 'Шифровать'
+        OnClick = CoderCodeClick
+      end
+      object CoderDecode: TMenuItem
+        Caption = 'Дешифровать'
+        OnClick = CoderDecodeClick
+      end
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Справка'
+      object HelpMenu: TMenuItem
+        Caption = 'Справка'
+      end
+      object HelpAbout: TMenuItem
+        Caption = 'О программе'
+      end
+    end
+  end
+end
